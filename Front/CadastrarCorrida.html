@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Cadastro de Corrida</title>
+</head>
+
+<body>
+    <form method="POST" action="CadastrarCorrida.html">
+          
+        <table>
+            <tr>
+                <td>CPF do Motorista: </td>
+                <td><input type="number" name="cpfMotorista" id="cpfMotorista"></td><input type="text"size="20" name="avisoMotorista" disabled="disabled"></td>
+            </tr>
+            <tr>
+                <td>CPF do Passageiro: </td>
+                <td><input type="number" name="cpfPassageiro" id="cpfPassageiro"></td><td><input type="text"size="20" name="avisoPassageiro" disabled="disabled"></td>
+            </tr>
+            <tr>
+                <td>Valor da Corrida: </td>
+                <td><input type="number" name="valorCorrida" id="valorCorrida"></td><td><input type="text"size="20" name="avisoValor" disabled="disabled"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value = "Enviar Dados."></td>
+            </tr>
+        </table>
+        
+    </form>
+    <script>
+        function enviarDados(){
+           
+            var cpfMoto = document.getElementById("cpfMotorista").value;
+            var cpfPas = document.getElementById("cpfPassageiro").value;
+            var valor = document.getElementById("valorCorrida").value;
+            if(cpfMoto) alert('Campo em branco, digite novamente.');
+            if(cpfPas) alert('Campo em branco, digite novamente.');
+            if(valor) alert('Campo em branco, digite novamente.')
+            else if(valor < 0) alert('Não existe valor monetario negativo.')
+            else alert('Cadastro realizado com sucesso\nCPF do Motorista: '+ cpfMoto +'\nCPF do Passageiro: '+ cpfPas +'\nValor da corrida: '+ valor);
+
+        }
+    </script>
+</body>
+</html>

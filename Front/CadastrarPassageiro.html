@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Cadastro de Passageiro</title>
+</head>
+
+<body>
+    <div>
+    <form method="POST" action="Routes/Passageiro/cadastrarPassageiro">         
+        <table>
+            <tr>
+                <td>Nome do Passageiro: </td>
+                <td><input type="text" name="nomePassageiro" id="nmPassageiro"></td><input type="text"size="20" name="avisoPassageiro" disabled="disabled"></td>
+            </tr>
+            <tr>
+                <td>Data de Nascimento:  </td>
+                <td><input id="date" type="date"></td><td><input type="text"size="20" name="avisodata" disabled="disabled"></td>
+            </tr>
+            <tr>
+                <td>CPF: </td>
+                <td><input type="number" name="cpfPassageiro" id="cdPassageiro"></td><td><input type="text"size="20" name="avisoCPF" disabled="disabled"></td>
+            </tr>
+            <tr>
+                <td>Sexo: </td>
+                <td><input type="text" name="sexoPassageiro" id="dsSexo"></td><td><input type="text"size="20" name="avisoSexo" disabled="disabled"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value = "RealizarCadastro"></td>
+            </tr>
+        </table>  
+    </form> 
+    </div>
+    <script>
+        function RealizarCadastro(){
+            var nomePassageiro = document.getElementById("nmPassageiro").value;
+            var dataNasc = document.getElementById("date").value.toString();
+            //var dataNasc = d.toString();
+            var cpfPassageiro = document.getElementById("cdPassageiro").value;
+            var sexoPassageiro = document.getElementById("dsSexo").value;
+           
+            //alert('Cadastro realizado com sucesso\nCPF do Motorista: '+ cpfMoto +'\nCPF do Passageiro: '+ cpfPas +'\nValor da corrida: '+ valor);
+
+        }
+    </script>
+</body>
+</html>
